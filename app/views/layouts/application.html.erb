@@ -1,14 +1,25 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>AshleyTindell</title>
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-
-<%= yield %>
-
-</body>
+  <head>
+    <title>AshleyTindell</title>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <!-- Preloader -->
+    <div id="loader">
+      <div id="loaderInner"></div>
+    </div>
+    <!-- end Preloader -->
+    
+    <!-- Wrapper -->
+    <div id="wrapper">
+      <%= render 'layouts/navigation' %>
+      <%= yield %>
+      <%= render 'layouts/footer' %>
+    </div>
+    <!-- end Wrapper -->
+  
+  </body>
 </html>
