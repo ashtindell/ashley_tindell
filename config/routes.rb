@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   
 
+  resources :projects
+
   root 'static_pages#home'
 
   match '/home',        to: 'static_pages#home',      via: 'get'

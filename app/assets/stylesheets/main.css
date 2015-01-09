@@ -263,7 +263,7 @@ h1.prfTitle span {
 }
 
 .infoSocial li a {
-    color: #C3512F;
+    color: #8dbe85;
 }
 
 
@@ -542,7 +542,7 @@ span.date i{
 
 
 .testimonials{
-  background: url(parallaxBg/blurred-woods.jpg);
+  background: url(quotes/quote-bg.jpg);
   background-attachment: fixed;
   background-position: center top;
   background-repeat: repeat-y;
@@ -631,7 +631,7 @@ ul#category li a {
 
 
 ul#category li a:hover {
-    color: #C3512F;
+    color: #8dbe85;
 }
 
 
@@ -651,7 +651,7 @@ ul#category li a:hover {
 
 
 #category .current a {
-    color: #C3512F;
+    color: #8dbe85;
 }
 
 
