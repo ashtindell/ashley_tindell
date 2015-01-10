@@ -1,0 +1,54 @@
+<!-- Project details-->
+<section id="projectDetail" class="ofsBottom singleOffset">
+  <!--Container-->
+  <div class="container clearfix singleProject">
+    <h1 class="projTitle tCenter title"><%= @project.name %><span><%= @project.category %></span></h1>
+
+    <!--Extra-->
+    <!-- <div class="extra clearfix">
+      <div class="eight columns projSocials">
+        <ul>
+          <li><a href="#"><i class="icon-facebook"></i></a></li>
+          <li><a href="#"><i class="icon-linkedin"></i></a></li>
+          <li><a href="#"><i class="icon-instagram"></i></a></li>
+        </ul>
+      </div>
+      <div class="eight columns projNav">
+        <ul>
+          <li><a href="#"><i class="icon-left-open-big"></i></a></li>
+          <li><a href="#"><i class="icon-layout"></i></a></li>
+          <li><a href="#"><i class="icon-right-open-big"></i></a></li>
+        </ul>
+      </div>
+    </div> -->
+    <!--End extra-->
+
+    <!--Project details slider--> 
+    <div class="projectSlider flexslider">
+      <ul class="slides">
+        <li><img src=<%= @project.image_file %> alt=""/></li>
+      </ul>
+    </div>
+    <!--End project details slider--> 
+
+    <!--Project single details-->
+    <div class="singleDetails clearfix">
+      <div class="four columns projectInfo">
+        <h1>Information</h1>
+        <ul class="iList">
+          <li><i class="icon-circle "></i><%= @project.information %></li>
+        </ul> 
+      </div>
+      <div class="twelve columns">
+        <h1>Project Details</h1>
+        <%= @project.details.gsub(/\n/, "<br />").html_safe %>
+        <div class="btn">
+          <a href=<%= @project.url %> target="_blank">Launch Project</a>
+        </div>
+      </div>
+    </div>
+    <!--End project single details-->
+  </div>
+  <!--End container-->
+</section>
+<!--End project details-->
