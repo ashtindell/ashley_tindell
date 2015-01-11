@@ -25,3 +25,7 @@ doc/
 .project
 .idea
 .secret
+
+app/assets/images/logo.psd
+app/assets/images/profile-template.psd
+app/assets/images/sliderImages/slide-template.psd

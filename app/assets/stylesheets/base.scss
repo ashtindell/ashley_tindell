@@ -144,7 +144,9 @@ iframe{width:100%;frameborder:0;}
     
   }
   
-  
+  a:visited, a:hover {
+    color:$secondary;
+  }
   
   .btn a:hover, .tagsListSingle li a:hover, .tagsList li a:hover, .contactForm #submit:hover , .replyForm #submit:hover,
   .projSocials li a:hover, .projNav li a:hover, .comments .reply-btn a:hover, .comments .reply-btn a   {
