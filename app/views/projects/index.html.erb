@@ -1,35 +1,23 @@
-<h1>Listing projects</h1>
+<div style="margin-top: 150px;">
 
-<table>
-  <thead>
-    <tr>
-      <th>Name</th>
-      <th>Category</th>
-      <th>Image file</th>
-      <th>Information</th>
-      <th>Details</th>
-      <th>Url</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  <h1>Listing projects</h1>
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.name %></td>
-        <td><%= project.category %></td>
-        <td><%= project.image_file %></td>
-        <td><%= project.information %></td>
-        <td><%= project.details %></td>
-        <td><%= project.url %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+    <div>
+      <ul>
+        <% @projects.each do |project| %>
+          <li><%= project.name %></li>
+          <li><%= project.category %></li>
+          <li><%= project.image_file %></li>
+          <li><%= project.information %></li>
+          <li><%= project.details %></li>
+          <li><%= project.url %></li>
+          <li><%= link_to 'Show', project %>, <%= link_to 'Edit', edit_project_path(project) %>, <%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></li>
+          <br />
+        <% end %>
+      </ul>
+    </div>
 
-<br>
+  <br>
 
-<%= link_to 'New Project', new_project_path %>
+  <%= link_to 'New Project', new_project_path %>
+</div>
