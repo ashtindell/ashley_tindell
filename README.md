@@ -1,5 +1,4 @@
 #Ashley Tindell | Portfolio
-___
 
 ##Overview
 
