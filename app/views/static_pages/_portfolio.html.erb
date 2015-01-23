@@ -23,101 +23,19 @@
   <div class=" works clearfix ">
     <!--Portfolio-->
     <ul class="portfolio clearfix">
-      <li class="item" data-id="id-1" data-type="catDev catDesign catBrand">
-        <div class="itemDesc">
-          <div class="itemDescInner">
-            <h3>Crave<span>web development, logo design</span></h3>
-            <div class="btn whtBtn">
-              <a href="projects/1" class="doubleRight">View Details</a>
+      <% @portfolio.each do |project| %>  
+        <li class="item" data-id="<%= project.data_id %>" data-type="<%= project.data_type %>">
+          <div class="itemDesc">
+            <div class="itemDescInner">
+              <h3><%= project.name %><span><%= project.category %></span></h3>
+              <div class="btn whtBtn">
+                <a href="projects/<%= project.id %>" class="doubleRight">View Details</a>
+              </div>
             </div>
           </div>
-        </div>
-        <img src="assets/portfolioImages/crave.jpg" alt="">
-      </li>
-      
-      <li class="item" data-id="id-3" data-type="catDev catDesign">
-        <div class="itemDesc">
-          <div class="itemDescInner">
-            <h3>Trailfolio<span>web development</span></h3>
-            <div class="btn whtBtn">
-              <a href="projects/3" class="doubleRight">View Details</a>
-            </div>
-          </div>
-        </div>
-        <img src="assets/portfolioImages/trailfolio.jpg" alt="">
-      </li>
-      
-      <li class="item" data-id="id-2" data-type="catDev catDesign catBrand">
-        <div class="itemDesc">
-          <div class="itemDescInner">
-            <h3>Kaboodle<span>web development, logo design</span></h3>
-            <div class="btn whtBtn">
-              <a href="projects/2" class="doubleRight">View Details</a>
-            </div>
-          </div>
-        </div>
-        <img src="assets/portfolioImages/kaboodle.jpg" alt="">
-      </li>
-
-      <li class="item" data-id="id-4" data-type="catDesign catWP catBrand">
-        <div class="itemDesc">
-          <div class="itemDescInner">
-            <h3>S&K Event Design and Rentals<span>wordpress, branding/logo design</span></h3>
-            <div class="btn whtBtn">
-              <a href="projects/6" class="doubleRight">View Details</a>
-            </div>
-          </div>
-        </div>
-        <img src="assets/portfolioImages/skevents.jpg" alt="">
-      </li>
-
-      <li class="item" data-id="id-5" data-type="catDesign catWP">
-        <div class="itemDesc">
-          <div class="itemDescInner">
-            <h3>ChristChurch Suwanee<span>wordpress</span></h3>
-            <div class="btn whtBtn">
-              <a href="projects/5" class="doubleRight">View Details</a>
-            </div>
-          </div>
-        </div>
-        <img src="assets/portfolioImages/ccs.jpg" alt="">
-      </li>
-
-      <li class="item" data-id="id-6" data-type="catDesign catWP catEcom">
-        <div class="itemDesc">
-          <div class="itemDescInner">
-            <h3>Metro Atlanta Seminary<span>wordpress, ecommerce</span></h3>
-            <div class="btn whtBtn">
-              <a href="projects/4" class="doubleRight">View Details</a>
-            </div>
-          </div>
-        </div>
-        <img src="assets/portfolioImages/mas.jpg" alt="">
-      </li>
-
-      <li class="item" data-id="id-6" data-type="catDesign catWP catBrand">
-        <div class="itemDesc">
-          <div class="itemDescInner">
-            <h3>Ghent CareGivers<span>wordpress, logo design</span></h3>
-            <div class="btn whtBtn">
-              <a href="projects/7" class="doubleRight">View Details</a>
-            </div>
-          </div>
-        </div>
-        <img src="assets/portfolioImages/ghent.jpg" alt="">
-      </li>
-
-      <li class="item" data-id="id-6" data-type="catDesign catWP">
-        <div class="itemDesc">
-          <div class="itemDescInner">
-            <h3>New City Church<span>wordpress</span></h3>
-            <div class="btn whtBtn">
-              <a href="projects/8" class="doubleRight">View Details</a>
-            </div>
-          </div>
-        </div>
-        <img src="assets/portfolioImages/newcity.jpg" alt="">
-      </li>      
+          <img src="<%= project.image_file %>" alt="">
+        </li>
+      <% end %>     
     </ul>
     <!--End portfolio-->
   </div>
